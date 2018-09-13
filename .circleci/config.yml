@@ -1,9 +1,16 @@
 workflows:
   version: 2
-  one_and_two:
+  one_and_two_parallel:
     jobs:
       - one
       - two
+
+  one_then_two_sequentiell:
+    jobs:
+      - one
+      - two:
+          requires:
+            - one
 
 
 version: 2
