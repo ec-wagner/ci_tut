@@ -21,7 +21,14 @@ jobs:
     steps:
       - checkout
       - run: echo "A first hello"
-      - run: sleep 5
+      - run: mkdir -p my_workspace
+      - run: echo "Trying out workspace" > my_workspace/echo-output
+      - persist_to_workspace:
+          # must be absolut path, or relativ from workdir
+          root: my_workspace
+          # must be relative from root
+          paths:
+            - echo-output
   two:
     docker:
       - image: circleci/ruby:2.4.1
