@@ -1,2 +1,3 @@
-# ci_tut
-circleci tutorial
+[![CircleCI](https://circleci.com/gh/ec-wagner/ci_tut.svg?style=svg)](https://circleci.com/gh/ec-wagner/ci_tut)
+
+# circleci tutorial
