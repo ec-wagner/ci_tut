@@ -18,7 +18,7 @@ jobs:
   one:
     docker:
       - image: circleci/ruby:2.4.1
-     steps:
+    steps:
       - checkout
       - run: echo "A first hello"
       - run: mkdir -p my_workspace
